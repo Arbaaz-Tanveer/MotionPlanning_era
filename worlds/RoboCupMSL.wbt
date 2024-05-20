@@ -1,0 +1,79 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "../protos/RobocupSoccerField.proto"
+EXTERNPROTO "../protos/RobocupSoccerBall.proto"
+EXTERNPROTO "../protos/OrangePlayer.proto"
+EXTERNPROTO "../protos/BluePlayer.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.17624611581377841 0.7640796140797271 0.6205800915339867 0.7115034980679902
+  position -14.761047890081805 -8.298293872339919 9.955834814517893
+}
+TexturedBackground {
+  texture "stadium"
+}
+TexturedBackgroundLight {
+  texture "stadium"
+}
+RectangleArena {
+  translation 0 0 -0.05
+  floorSize 24 16
+  wallHeight 0.5
+  wallAppearance BrushedAluminium {
+    colorOverride 0 0 0
+  }
+}
+RobocupSoccerField {
+  turfPhysics FALSE
+}
+DEF Ball RobocupSoccerBall {
+  translation -7.4 0 0.122
+}
+DEF OMNI_WHEELS_4 OrangePlayer {
+  hidden rotation_4 0.06352083675856868 0.9979805117224952 -3.89820238015071e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372404297 0.0003542860933059901 7.07503829251001e-07 0.003908061945932869
+}
+DEF B1 BluePlayer {
+  hidden rotation_4 0.06509502106110601 0.9978790691831595 -3.8976980155455416e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372405397 0.0003542857835186609 7.07502605270892e-07 0.003908065363139035
+  translation 1.9306 0.384251 0.0694759
+  rotation 0 0 1 3.14
+}
+DEF B2 BluePlayer {
+  hidden rotation_4 0.061421434155803006 0.998111920531026 -3.898859869642707e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372402836 0.0003542865063566054 7.075054612278098e-07 0.003908057389653333
+  translation 1.2 1.7 0.0695
+  rotation 0 0 1 3.14159
+  NAME "B2"
+  controller "b2"
+}
+DEF B3 BluePlayer {
+  hidden rotation_4 0.06509502106110601 0.9978790691831595 -3.8976980155455416e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372405397 0.0003542857835186609 7.07502605270892e-07 0.003908065363139035
+  translation 1.46 -1.18 0.0695
+  rotation 0 0 1 3.14159
+  NAME "B3"
+  controller "b4"
+}
+DEF B4 BluePlayer {
+  hidden rotation_4 0.061421434155803006 0.998111920531026 -3.898859869642707e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372402836 0.0003542865063566054 7.075054612278098e-07 0.003908057389653333
+  translation -0.100004 2.31 0.0695
+  rotation 0 0 1 3.14159
+  NAME "B4"
+  controller "b4"
+}
+DEF B5 BluePlayer {
+  hidden rotation_4 0.061421434155803006 0.998111920531026 -3.898859869642707e-05 1.3709068298340113e-06
+  hidden rotation_34 -0.9999999372402836 0.0003542865063566054 7.075054612278098e-07 0.003908057389653333
+  translation -1.68 2.02 0.0695
+  rotation 0 0 1 3.14159
+  NAME "B5"
+  controller "b5"
+}
